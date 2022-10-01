@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+:root{
+    --Cyan: hsl(179, 62%, 43%);
+    --BrightYellow: hsl(71, 73%, 54%);
+
+    --LightGray: hsl(204, 43%, 93%);
+    --GrayishBlue: hsl(218, 22%, 67%);
+    font-size: 16px;
+}
+
+*{
+    box-sizing: border-box;
+    font-family: 'Karla', sans-serif;
+}
+
+body{
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+    background-color: var(--LightGray);
+}
+
+main{
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+article{
+    position: relative;
+    max-width: 634px;
+    height: 474px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 45.5% 54.5%;
+}
+
+.top{
+    background-color: white;
+    grid-column: 1 / -1;
+    padding: 19px 38px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.top>h2{
+    color: var(--Cyan);
+    margin-bottom: 6px;
+}
+.top>h3{
+    color: var(--BrightYellow);
+    font-size: 1.1rem;
+    margin-bottom: 11px;
+}
+.top>p{
+    margin: 0px;
+    color: var(--GrayishBlue);
+    line-height: 1.7em;
+
+}
+
+
+.bottom-left{
+    background-color: var(--Cyan);
+    display: flex;
+    flex-direction: column;
+    padding: 40px 38px;
+    
+}
+
+.bottom-left>* {
+    margin: 0px;
+}
+.bottom-left>h3{
+    color: var(--LightGray);
+    font-size: 1.11rem;
+}
+
+.price-container{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
+}
+.price-container> :nth-child(1) {
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.price-container> :nth-child(2) {
+    color: var(--LightGray);
+    opacity: 0.6;
+}
+
+.bottom-left>p{
+    color: var(--LightGray);
+}
+
+
+.bottom-right{
+    background-color: hsla(179, 62%, 43%, 0.699);
+    padding: 40px 38px;
+}
+.bottom-right>*{
+    margin: 0px;
+}
+.bottom-right>h3{
+    color: var(--LightGray);
+}
+.bottom-right>p{
+    color: white;
+    opacity: 0.7;
+    margin-top: 18px;
+    font-size: 0.85rem;
+    font-weight: 400;
+    max-width: 80%;
+    line-height: 1.5em;
+}
+
+
+.bottom-left>button{
+    position: relative;
+    width: 100%;
+    background-color: var(--BrightYellow);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    padding: 14px;
+    margin-top: auto;
+    font-size: 1rem;
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.192);
+}
+
+
+@media screen and (max-width: 550px) {
+    article {
+        margin: 20px;
+        height: auto;
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 470px) {
+    article {
+        max-width: 634px;
+        margin: 20px;
+        height: auto;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(3, 1fr);
+    }
+}
